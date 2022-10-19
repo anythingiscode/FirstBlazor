@@ -1,0 +1,125 @@
+﻿@page "/filmdetails"
+@page "/filmdetails/{id:int}"
+@using Interfaces
+@using Model
+@inject IFilmsService FilmService
+@inject NavigationManager NavigationManager         //Con esta clase podemos hacer que cuando modificamos un film al navegar vayamos a la pag FilmList directamenete --> ver en " ****** "
+
+<h1>Film Details</h1>
+
+<RadzenTemplateForm Data="@film">       @* Esto esta bindeando "film" del mismo modo que lo hice con "EditForm" de Blazor *@
+    <div class="row">
+        <div class="col-10">
+            <RadzenFieldset Text="Film Details">
+                <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">
+                        <RadzenLabel Text="Title" />
+                    </div>
+                    <div class="col-md-6 fieldSpace">
+                        <RadzenTextBox Name="Title" Style="width:100%" @bind-Value="film.Title" />
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">
+                        <RadzenLabel Text="Director" />
+                    </div>
+                    <div class="col-md-6 fieldSpace">
+                        <RadzenTextBox Name="Director" Style="width:100%" @bind-Value="film.Director" />
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">
+                        <RadzenLabel Text="Release Date" />
+                    </div>
+                    <div class="col-md-6 fieldSpace">
+                        <RadzenDatePicker @bind-Value="film.ReleaseDate" DateFormat="d"/>       @*Trato el campo fecha diferente de los textos anteriores *@
+                    </div>
+                </div>
+                @* Agrego botones *@
+                <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">        
+                    </div>
+                    <div class="col-md-6">
+                        <RadzenButton Text="Save" ButtonStyle="ButtonStyle.Primary" Click=@(args => SaveFilm()) />
+                        <RadzenButton Text="Cancel" ButtonStyle="ButtonStyle.Secondary" Click=@(args => CancelFilm()) />
+                    </div>
+                </div>
+
+            </RadzenFieldset>
+        </div>
+    </div>
+</RadzenTemplateForm>
+
+
+@*  ********************   FROMATO BLAZOR    ********************  *@
+
+ <EditForm Model="@film">
+    <table class="table">
+        <tr>                        @* Agrego una fila*@
+            <tr>
+                <td>Title:</td>         @* Agrego columna*@
+                @* Cuando el usuario escriba algo en la caja Txt del Titulo esto modificara film.Title *@
+                <td><input type="text" @bind="film.Title" /> </td>      
+            </tr>            
+        </tr>
+
+        <tr>  
+            <tr>
+            <td>Director:</td>                    
+            <td><input type="text" @bind="film.Director" /> </td>      
+            </tr>
+        </tr>
+
+        <tr>    
+            <tr>
+            <td>Release Date:</td>                    
+            <td><input type="text" @bind="film.ReleaseDate" /> </td>  
+            </tr>
+        </tr>
+
+        @*Agregamos 2 botones*@
+        <tr>                                @*--> agrego linea*@
+            <tr>
+                <td colspan="2" style="text-align:center">   @*--> agrego 2 columnas*@
+                    <input type="submit" value="Save" @onclick="SaveFilm" />
+                    <input type="button" value="Cancel" @onclick="CancelFilm" />
+                </td>
+            </tr>
+        </tr>
+
+    </table>
+
+</EditForm>
+
+
+@code {
+    [Parameter]         // Recibimos los parametros de id para el casio en el que accedemos a la pag filmdetails con: "@page "/filmdetails/{id:int}""
+    public int id { get; set; }   
+
+    Film film = new Film();
+    protected void CancelFilm()
+    {
+        NavigationManager.NavigateTo("/filmlist");      // ******
+
+    }
+
+    protected async Task SaveFilm()
+    {
+        await FilmService.SaveFilm(film);
+        NavigationManager.NavigateTo("/filmlist");      // ******
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (id==0)
+        {
+            film.ReleaseDate = DateTime.Now;
+        }
+        else
+        {
+            film = await FilmService.GetDetails(id);
+        }
+    }
+}

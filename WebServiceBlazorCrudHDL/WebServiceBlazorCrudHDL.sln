@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceBlazorCrudHDL", "WebServiceBlazorCrudHDL\WebServiceBlazorCrudHDL.csproj", "{584F2B26-8547-4069-8711-7054F2D61966}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7F6AC43C-A8E7-4985-A8C1-630768A3B08E} = {7F6AC43C-A8E7-4985-A8C1-630768A3B08E}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCrudHDL", "BlazorCrudHDL\BlazorCrudHDL.csproj", "{7F6AC43C-A8E7-4985-A8C1-630768A3B08E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{584F2B26-8547-4069-8711-7054F2D61966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584F2B26-8547-4069-8711-7054F2D61966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584F2B26-8547-4069-8711-7054F2D61966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584F2B26-8547-4069-8711-7054F2D61966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6AC43C-A8E7-4985-A8C1-630768A3B08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6AC43C-A8E7-4985-A8C1-630768A3B08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6AC43C-A8E7-4985-A8C1-630768A3B08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6AC43C-A8E7-4985-A8C1-630768A3B08E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EED7215C-5BB7-4D1F-8D9A-36B13F5DAA36}
+	EndGlobalSection
+EndGlobal

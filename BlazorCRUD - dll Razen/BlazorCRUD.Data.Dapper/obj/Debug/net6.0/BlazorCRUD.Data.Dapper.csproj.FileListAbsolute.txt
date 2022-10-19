@@ -1,0 +1,45 @@
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.deps.json
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.pdb
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.AssemblyReference.cache
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.AssemblyInfoInputs.cache
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.AssemblyInfo.cs
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.CoreCompileInputs.cache
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\refint\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.pdb
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\ref\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Model.dll
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Model.pdb
+C:\ROL\C#\APPs\Test1\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.CopyComplete
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.deps.json
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.pdb
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Model.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Model.pdb
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.AssemblyReference.cache
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.AssemblyInfoInputs.cache
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.AssemblyInfo.cs
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.CoreCompileInputs.cache
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.CopyComplete
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\refint\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.pdb
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\ref\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.deps.json
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Data.Dapper.pdb
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Model.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\bin\Debug\net6.0\BlazorCRUD.Model.pdb
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.AssemblyReference.cache
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.AssemblyInfoInputs.cache
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.AssemblyInfo.cs
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.CoreCompileInputs.cache
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.csproj.CopyComplete
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\refint\BlazorCRUD.Data.Dapper.dll
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\BlazorCRUD.Data.Dapper.pdb
+C:\ROL\C#\APPs\BLAZOR\BlazorCRUD - dll Razen\BlazorCRUD.Data.Dapper\obj\Debug\net6.0\ref\BlazorCRUD.Data.Dapper.dll

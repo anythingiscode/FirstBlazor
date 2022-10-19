@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Data.Dapper\\BlazorCRUD.Data.Dapper.csproj": {}
+  },
+  "projects": {
+    "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Data.Dapper\\BlazorCRUD.Data.Dapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Data.Dapper\\BlazorCRUD.Data.Dapper.csproj",
+        "projectName": "BlazorCRUD.Data.Dapper",
+        "projectPath": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Data.Dapper\\BlazorCRUD.Data.Dapper.csproj",
+        "packagesPath": "C:\\Users\\ROL\\.nuget\\packages\\",
+        "outputPath": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Data.Dapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ROL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj": {
+                "projectPath": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj",
+        "projectName": "BlazorCRUD.Model",
+        "projectPath": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj",
+        "packagesPath": "C:\\Users\\ROL\\.nuget\\packages\\",
+        "outputPath": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD - dll Razen\\BlazorCRUD.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ROL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

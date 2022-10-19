@@ -1,0 +1,16 @@
+﻿@page "/cervezas"
+
+@using System.Net.Http
+@using System.Net.Http.Json
+@inject HttpClient 
+
+<h1>Cervezas</h1>
+
+@code {
+    public string Url = "/api/Cerveza";
+    public Data.RespuestaBlz oRespuesta = new Data.RespuestaBlz();
+
+    protected override async Task OnInitializedAsync() =>
+        oRespuesta = await Http.GetFromJsonAsync
+
+}

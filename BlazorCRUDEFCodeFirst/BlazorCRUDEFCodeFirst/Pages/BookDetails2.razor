@@ -1,0 +1,40 @@
+﻿@page "/bookdetails2"
+@inject IBookService BookService
+
+<h1>Book Details</h1>
+
+<EditForm Model="@book">
+
+    <table class="table">
+        <tr>
+            <td>Title:</td>
+            <td><input class="from-control col-sm-4" type="text" @bind="book.Title" /></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>Author:</td>
+            <td><input class=" from-control col-sm-4" type="text" @bind="book.Author"/></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        @*Creo los dos botones*@
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" value="Save" onclick="SaveBook" />
+                <input type="button" value="Cancel" />
+            </td>
+        </tr>
+
+    </table>
+
+</EditForm>
+
+@code {
+    private Book book = new Book();
+
+    protected async Task SaveBook()
+    {
+        await BookService.SaveBook(book);
+    }
+
+}

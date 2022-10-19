@@ -1,0 +1,101 @@
+﻿@page "/filmlist"
+@using Model
+@using Interfaces
+@inject IFilmsService FilmService
+
+
+<h1>FilmList</h1>
+
+<p> This page shows a list of films.</p>
+
+@if(films == null)
+{
+    <p><em>Loading...</em></p>      @*Escribimos este msg*@
+}
+else
+{
+
+    @*  ************************    APLICO LA DLL RADZEN CON EL GRID BÁSICO   ************************   *@
+
+    @* Añado un DropDown  *@
+
+
+    @* "AllowClear="true" -->Permite borrar el contenido de la ventana con la "X";  TValue="int" : es el tipo de valor que le vamos a pasar. En este caso es el Id del film --> int  *@
+    <RadzenDropDown AllowClear="true" TValue="int"                      
+                    Data=@(films.Select(f => new {Id = f.Id, Title = f.Title}).Distinct())
+                    TextProperty="Title" ValueProperty="Id">
+    </RadzenDropDown>
+
+    <RadzenGrid AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                FilterMode="FilterMode.Advanced" AllowPaging="true" PageSize="4" AllowSorting="true" 
+                Data="@films" TItem="Film" ColumnWidth="200px">
+
+        <Columns>
+            <RadzenGridColumn TItem="Film" property="Title" Title="Title" />
+                <RadzenGridColumn TItem="Film" property="Director" Title="Director" />
+                        <RadzenGridColumn TItem="Film" property="ReleaseDate" Title="Release Date" >
+                        <Template Context="data">
+                            @String.Format("{0:d}", data.ReleaseDate)
+                        </Template>
+                    </RadzenGridColumn>
+                    
+                    <RadzenGridColumn TItem="Film" Title="Edit" >
+                        <Template Context="data">
+                            <RadzenLink Path=@($"/filmsdetails/{data.Id}") Text="Edit" />
+                        </Template>                        
+                    </RadzenGridColumn>
+
+                    <RadzenGridColumn TItem="Film" Title="Delete" >
+                        <Template Context="data">
+                                <RadzenLink Path=@($"/filmdelete/{data.Id}") Text="Delete"  />    @* Se podria añadir un Target--> ej: "Target="_blank"*@
+                        </Template>                        
+                    </RadzenGridColumn>
+        </Columns>
+    </RadzenGrid>
+                                
+    
+
+    <table class="table">
+        <thead>                             @*Cabeceras*@
+            <tr>                            @*Fila*@
+                <th>Title</th>
+                <th>Director</th>
+                <th>Release Date</th>           
+            </tr>
+        </thead>
+        <tbody>                                 @*El cuerpo de la tabla*@
+            @foreach(var film in films)
+            {
+                <tr>                                @* Fila para cada valor de la tabla*@
+                    <td>@film.Title</td>
+                    <td>@film.Director</td>
+                    <td>@film.ReleaseDate</td>
+                    <td><a href="/filmdetails/@film.Id"><i>Edit</i></a></td>
+                    <td><a href="/filmdelete/@film.Id"><i>Delete</i></a></td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+
+@code {
+
+    private IEnumerable<Film> films;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            films = await FilmService.GetAllFilms();
+        }
+        catch (Exception)
+        {
+           
+            throw;
+        }
+        
+    }
+}
+

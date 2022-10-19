@@ -1,0 +1,124 @@
+﻿@page "/filmdelete/{id:int}"
+@using Model
+@using Interfaces
+@inject IFilmsService FilmService
+@inject NavigationManager NavigationManager
+
+<h1>Film Delete</h1>
+<p style="color:red;text-align:center">Are you sure you want delete this film?</p>
+
+
+@*  ************************    APLICO LA DLL RADZEN   ************************   *@
+
+
+
+<RadzenTemplateForm Data="@film">       @* Esto esta bindeando "film" del mismo modo que lo hice con "EditForm" de Blazor *@
+    <div class="row">
+        <div class="col-10">
+            <RadzenFieldset Text="Film Details">
+                <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">
+                        <RadzenLabel Text="Title" />
+                    </div>
+                    <div class="col-md-6 fieldSpace">
+                        <RadzenTextBox Name="Title" Style="width:100%" @bind-Value="film.Title" />
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">
+                        <RadzenLabel Text="Director" />
+                    </div>
+                    <div class="col-md-6 fieldSpace">
+                        <RadzenTextBox Name="Director" Style="width:100%" @bind-Value="film.Director" />
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">
+                        <RadzenLabel Text="Release Date" />
+                    </div>
+                    <div class="col-md-6 fieldSpace">
+                        <RadzenDatePicker @bind-Value="film.ReleaseDate" DateFormat="d"/>       @*Trato el campo fecha diferente de los textos anteriores *@
+                    </div>
+                </div>
+                @* Agrego botones *@
+                <div class="row">
+                    <div class="col-md-2 align-items-center d-flex">        
+                    </div>
+                    <div class="col-md-6">
+                        <RadzenButton Text="Delete" ButtonStyle="ButtonStyle.Primary" Click=@(args => DeleteFilm()) />
+                        <RadzenButton Text="Cancel" ButtonStyle="ButtonStyle.Secondary" Click=@(args => Cancel()) />
+                    </div>
+                </div>
+
+            </RadzenFieldset>
+        </div>
+    </div>
+</RadzenTemplateForm>
+
+
+
+@* Es el mismo html que la page FilmDetails *@
+<EditForm Model="@film">
+    <table class="table">
+        <tr>                        @* Agrego una fila*@
+            <tr>
+                <td>Title:</td>         @* Agrego columna*@
+                @* Cuando el usuario escriba algo en la caja Txt del Titulo esto modificara film.Title *@
+                <td><input type="text" @bind="film.Title" /> </td>      
+            </tr>            
+        </tr>
+
+        <tr>  
+            <tr>
+            <td>Director:</td>                    
+            <td><input type="text" @bind="film.Director" /> </td>      
+            </tr>
+        </tr>
+
+        <tr>    
+            <tr>
+            <td>Release Date:</td>                    
+            <td><input type="text" @bind="film.ReleaseDate" /> </td>  
+            </tr>
+        </tr>
+
+        @*Agregamos 2 botones*@
+        <tr>                                @*--> agrego linea*@
+            <tr>
+                <td colspan="2" style="text-align:center">   @*--> agrego 2 columnas*@
+                    <input type="submit" value="Delete" @onclick="DeleteFilm" />
+                    <input type="button" value="Cancel" @onclick="Cancel" />
+                </td>
+            </tr>
+        </tr>
+
+    </table>
+
+</EditForm>
+
+
+
+@code {
+    Film film = new Film();
+
+    [Parameter]
+    public int id { get; set; }
+
+    protected async Task DeleteFilm()
+    {
+        await FilmService.DeleteFilm(id);
+        NavigationManager.NavigateTo("/filmlist");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        film = await FilmService.GetDetails(id);    //Quiero ver lo que vamos a eliminar antes de salir...
+    }
+
+    protected void Cancel()
+    {
+        NavigationManager.NavigateTo("/filmlist");
+    }
+}
