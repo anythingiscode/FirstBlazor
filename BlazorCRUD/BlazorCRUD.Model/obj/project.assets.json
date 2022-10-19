@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj",
+      "projectUniqueName": "C:\\Users\\ROL\\source\\repos\\anythingiscode\\FirstBlazor\\BlazorCRUD\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj",
       "projectName": "BlazorCRUD.Model",
-      "projectPath": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj",
+      "projectPath": "C:\\Users\\ROL\\source\\repos\\anythingiscode\\FirstBlazor\\BlazorCRUD\\BlazorCRUD.Model\\BlazorCRUD.Model.csproj",
       "packagesPath": "C:\\Users\\ROL\\.nuget\\packages\\",
-      "outputPath": "C:\\ROL\\C#\\APPs\\BLAZOR\\BlazorCRUD\\BlazorCRUD.Model\\obj\\",
+      "outputPath": "C:\\Users\\ROL\\source\\repos\\anythingiscode\\FirstBlazor\\BlazorCRUD\\BlazorCRUD.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ROL\\AppData\\Roaming\\NuGet\\NuGet.Config",

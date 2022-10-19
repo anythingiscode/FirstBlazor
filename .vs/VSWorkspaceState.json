@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\CrudNetCore6",
-    "\\CrudNetCore6\\CrudNetCore6",
-    "\\CrudNetCore6\\CrudNetCore6\\Client",
-    "\\CrudNetCore6\\CrudNetCore6\\Client\\Pages"
+    ""
   ],
-  "SelectedNode": "\\CrudNetCore6\\CrudNetCore6\\Client\\Pages\\Index.razor",
+  "SelectedNode": "\\CrudNetCore6.sln",
   "PreviewInSolutionExplorer": false
 }
