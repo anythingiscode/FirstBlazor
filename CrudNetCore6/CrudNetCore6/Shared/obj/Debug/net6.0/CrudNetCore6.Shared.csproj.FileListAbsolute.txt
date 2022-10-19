@@ -1,0 +1,12 @@
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\bin\Debug\net6.0\CrudNetCore6.Shared.deps.json
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\bin\Debug\net6.0\CrudNetCore6.Shared.dll
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\bin\Debug\net6.0\CrudNetCore6.Shared.pdb
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\CrudNetCore6.Shared.csproj.AssemblyReference.cache
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\CrudNetCore6.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\CrudNetCore6.Shared.AssemblyInfoInputs.cache
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\CrudNetCore6.Shared.AssemblyInfo.cs
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\CrudNetCore6.Shared.csproj.CoreCompileInputs.cache
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\CrudNetCore6.Shared.dll
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\refint\CrudNetCore6.Shared.dll
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\CrudNetCore6.Shared.pdb
+C:\ROL\C#\APPs\BLAZOR\CrudNetCore6\CrudNetCore6\Shared\obj\Debug\net6.0\ref\CrudNetCore6.Shared.dll

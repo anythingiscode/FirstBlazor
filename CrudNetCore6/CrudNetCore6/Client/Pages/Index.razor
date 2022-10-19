@@ -1,0 +1,101 @@
+﻿@page "/"
+@using CrudNetCore6.Shared
+@inject HttpClient Http
+
+
+<h1>LISTA DE USUARIOS</h1>
+
+@*Añadimos un botoncillo para poder navegar desde la lista hacia la pag de NuevoUsuario*@
+<div class="row">               @*Define una sección en un documento.*@
+    <div class="col-md-6">
+        <a href="/usuario/nuevo" class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i> @*Itálica - Este elemento se usa para representar un texto con un estilo de fuente en itálica*@
+                Nuevo Usuario
+        </a>
+    </div>
+    
+    <div class="input-group-append">
+        <input type="text" class="form-control" placeholder="Buscar por nombre"
+        @bind="cadenaBusqueda" @bind:event="oninput" @onkeyup="FiltroBusqueda" />
+
+        @if (cadenaBusqueda.Length > 0)
+        {
+            <div class="input-group-append">
+                <button class="btn btn-danger" @onclick="LimpiarBusqueda">
+                    <i class="fas fas-times"></i>
+                    Limpiar
+                </button>
+            </div>
+        }
+    </div>
+</div>
+
+<br />
+
+@if (lista == null)
+{
+        <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Teléfono</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var u in lista)
+        {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.Nombre</td>
+                <td>@u.Apellido</td>
+                <td>@u.Telefono</td>
+                <td>@u.Email</td>
+                <td>
+                    <a href='/usuario/editar/@u.Id' class="btn btn-secondary" role="button">
+                        Editar
+                    </a>
+                    <a href='/usuario/borrar/@u.Id' class="btn btn-danger" role="button">
+                        Borrar
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    //Llamamos a la lista de Usuarios
+    private List<Usuario> lista;
+    private List<Usuario> listaAux;     //Lista para el filtro que se hará por Nombre de usuario
+    string cadenaBusqueda = String.Empty;  //Inicializo la var de busqueda
+
+    protected override async Task OnInitializedAsync()
+    {
+        lista = await Http.GetFromJsonAsync<List<Usuario>>("api/Usuario");
+        listaAux = lista;
+    }
+
+    protected void FiltroBusqueda()
+    {        
+        if (!string.IsNullOrEmpty(cadenaBusqueda))      //Si es != nulo busco
+        {
+            lista = listaAux.Where(x => x.Nombre.IndexOf(cadenaBusqueda, StringComparison.OrdinalIgnoreCase) != -1).ToList();
+        }
+        else lista = listaAux;
+    }
+    //Limpiamos la caja de busqueda
+    public void LimpiarBusqueda()
+    {
+        cadenaBusqueda = string.Empty;
+        lista = listaAux;
+    }
+}
+

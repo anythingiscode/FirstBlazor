@@ -1,0 +1,53 @@
+﻿@page "/usuario/borrar/{Id:int}"
+@using CrudNetCore6.Shared;
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+<h2>Borrar Usuario</h2>
+<br />
+<div class="from-group">
+    <h4>¿Quiere BORRAR este usuario?</h4>
+    <table class="table">
+        <tbody>
+            <tr>                            @*Define una fila dentro de una tabla*@
+                <td>Nombre</td>             @*	td: Define una célda de una tabla*@
+                <td>@usuario.Nombre</td>
+            </tr>
+            <tr>            
+                <td>Apellido</td>
+                <td>@usuario.Apellido</td>
+            </tr>
+            <tr>           
+                <td>E-mail</td>
+                <td>@usuario.Email</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="from-group">
+    <input type="submit" value="Borrar" @onclick="(async () => await Borrar(usuario.Id))" class="btn btn-danger" />
+    <input type="submit" value="Cancelar" @onclick="(() => Cancel())" class="btn btn-warning" />
+</div>
+
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+    Usuario usuario = new Usuario();
+    protected override async Task OnInitializedAsync()
+    {
+        usuario = await Http.GetFromJsonAsync<Usuario>("api/Usuario/" + Id.ToString());
+    }
+
+    //Antes de borrar mostraremos los datos que se van a borrar
+    protected async Task Borrar(int id)
+    {
+        await Http.DeleteAsync("api/Usuario/" + id);
+        NavigationManager.NavigateTo("/");
+    }
+
+    //Boton para cancelar
+    void Cancel() => NavigationManager.NavigateTo("/");
+}

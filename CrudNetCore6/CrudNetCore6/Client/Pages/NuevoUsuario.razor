@@ -1,0 +1,93 @@
+﻿@page "/usuario/nuevo"
+@page "/usuario/editar/{Id:int}"
+@using CrudNetCore6.Shared;
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+<h1>@Titulo Usuario</h1>        @*Hacemos uso de la variable que se declara en la parte @code*@
+<hr />                          @*Define un cambio temático en el contenido*@
+<EditForm Model="@usuario" OnValidSubmit="GuardarUsuario">
+    <DataAnnotationsValidator/>      @*Haremos validadiones*@
+    @*NOMBRE*@
+    <div class="mb-3">
+        <label for="Name" class="from-label">Nombre</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="usuario.Nombre" /> 
+        </div>
+        <ValidationMessage For="@(() => usuario.Nombre)"/>      @*Sacamos msg por pantalla --> para ello en la declaracion de la clase Usuario añadimos el parametro "Required"*@
+    </div>
+    @*APELLIDO*@
+    <div class="mb-3">
+        <label for="Address" class="from-label">Apellido</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="usuario.Apellido" /> 
+        </div>
+        <ValidationMessage For="@(() => usuario.Apellido)"/>
+    </div>
+    @*TELEFONO*@
+    <div class="mb-3">
+        <label for="Cellnumber" class="from-label">Teléfono</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="usuario.Telefono" /> 
+        </div>
+        <ValidationMessage For="@(() => usuario.Telefono)"/>
+    </div>
+    @*EMAIL*@
+    <div class="mb-3">
+        <label for="mailid" class="from-label">Email</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="usuario.Email" /> 
+        </div>
+        <ValidationMessage For="@(() => usuario.Email)"/>
+    </div>
+
+    @*FECHA ALTA y FECHA BAJA no las rellenará el usuario --> es auto*@
+  
+    @*btnGUARDAR & btnCANCELAR*@
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancelar</button>
+    </div>
+</EditForm>
+
+
+@code {
+    //Como se puede acceder aqui desde dos direcciones >> aquí parametreamos la llegada con el Id par a "edit"
+    [Parameter]
+    public int Id { get; set; }
+
+    protected string Titulo = "Nuevo";      //Declaramos la variable Titulo
+    protected Usuario usuario = new();      //Creo el obj usuario
+
+    //Para detectar por donde llegamos y poner la var "Titulo" como corresponde:
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id !=0)
+        {
+            Titulo = "Editar";
+            //traemos un obj usuario al que indicamos :punto de entrada y Id
+            usuario = await Http.GetFromJsonAsync<Usuario>("api/Usuario/" + Id.ToString());   //--> en el controlador hay que poner el mét get que reciba param de entrada
+        }
+    }
+
+    protected async Task GuardarUsuario()       //Mét para guardar los usuarios
+    {
+        if(usuario.Id != 0)         // Parte que usamos cuando editamos
+        {
+            await Http.PutAsJsonAsync("api/Usuario", usuario);//petición Put
+        }
+        else
+        {
+            await Http.PostAsJsonAsync("api/Usuario", usuario);     //En caso de que id==0 redirijo a la pag inicio --> Lo creamos en el controlador en .server
+        }
+        Cancel();
+    }
+
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("/");    
+    }
+
+
+}
